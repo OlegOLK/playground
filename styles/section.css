@@ -6,6 +6,9 @@
     .cta-section-h-full{
         height: 34rem;
     }
+    .section-h-full:nth-child(odd){
+        background: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -14,6 +17,9 @@
     }   
     .cta-section-h-full{
         height: 34rem;
+    }
+    .section-h-full:nth-child(odd){
+        background: #F5F6F8 !important;
     }
 }
 
@@ -24,11 +30,12 @@
     .cta-section-h-full{
         height: 34rem;
     }
+    .section-h-full:nth-child(odd){
+        background: #F5F6F8 !important;
+    }
 }
 
-.section-h-full:nth-child(odd){
-    background: #F5F6F8 !important;
-}
+
 
 .section-header{
     margin-top: 16.19px;

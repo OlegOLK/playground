@@ -1,8 +1,9 @@
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .main-h-full {
-        margin-top: 112px;
-        height: 38rem;
+        margin-top: 138px;
+        height: 606px;
+        margin-bottom: 56px;
     }   
 }
 
@@ -21,7 +22,7 @@
     .main-h-full {
         margin-top: 112px;
         height: 38rem;
-        margin-bottom: 80px;
+        margin-bottom: 82px;
     }
     .main-mt{
         margin-top: 4.5rem;
@@ -32,7 +33,7 @@
     .main-h-full {
         margin-top: 112px;
         height: 38rem;
-        margin-bottom: 80px;
+        margin-bottom: 82px;
     }
     .main-mt{
         margin-top: 4.5rem;
@@ -43,11 +44,11 @@
 @media (min-width: 1536px) {
     .main-h-full {
         margin-top: 112px;
-        height: 790px;
+        height: 710px;
         margin-bottom: 49px;
     }
     .main-mt{
-        margin-top: 95.5px;
+        margin-top: 80px;
     }
 }
 
