@@ -1,0 +1,19 @@
+.dollar-symbol{
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 44px;
+    color: #EFF0F3;
+}
+
+.small-cube{
+    height: 75px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(137, 160, 172, 0.16);
+    border-radius: 5px;
+    /* transform: rotate(180deg); */
+}
+
+.top-7-75{
+    top: 7.75rem;
+}

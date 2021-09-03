@@ -1,0 +1,51 @@
+
+@media (max-width: 768px) {
+    .footer-h-full {
+        height: 20.2rem;
+    }   
+}
+
+@media (min-width: 768px) {
+    .footer-h-full {
+        height: 20.2rem;
+    }   
+}
+
+@media (min-width: 1024px) {
+    .footer-h-full {
+        height: 20.2rem;
+    }   
+}
+
+
+.footer-bg{
+    background-color: #4C4C4C;
+}
+
+.footer-pt{
+    padding-top: 3.75rem;
+}
+
+.footer-text-app{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.footer-list-mt{
+    margin-top: 14px;;
+}
+
+.footer-list-header-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #A1AEB7;
+    text-transform: uppercase;
+}
+
+.footer-list-item-text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}

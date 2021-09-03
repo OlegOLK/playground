@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="styles/tailwind.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/nav.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/section.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet">
+    <link href="styles/discord.css" rel="stylesheet">
+    <link href="styles/patterns.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screenrelative">
+    <nav class="h-28 bg-white w-full flex justify-center items-center z-50 fixed top-0 ">
+        <div class="grid gap-5 grid-w-full grid-cols-12 ">
+            <div class="col-start-1 col-span-2">
+                <div class="flex items-center ">
+                    <picture>
+                        <img class="inline" height="32" width="32" src="./assets/logo_cube.png" />
+                    </picture>
+                    <p class="ml-4 inline footer-text-app relative">
+                        iQube
+                        <span class="absolute text-center text-white -top-2 beta-badge">
+                            beta
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <a class="col-start-5 col-span-1 text-center self-center justify-self-center nav-list-item">
+                Features
+            </a>
+            <a class="col-start-6 col-span-1 text-center self-center justify-self-center nav-list-item">
+                Pricing
+            </a>
+
+            <a class="col-start-7 col-span-1 text-center self-center justify-self-center nav-list-item">
+                Contacts
+            </a>
+
+            <button class="col-start-8 col-span-1 nav-list-item ">
+                <p class="flex items-center color-main justify-end">
+                    <img src="./assets/globe.png" height="17" width="16" class="inline mr-2">
+                    EN
+                </p>
+            </button>
+
+            <button class="col-start-10 col-span-1 nav-list-item">
+                <p class="flex items-center color-main" style="text-transform: none !important;">
+                    <img src="./assets/user.png" height="17" width="16" class="inline mr-2">
+                    Sign In
+                </p>
+            </button>
+
+            <button class="col-start-11 col-span-2 bg-color-main text-white rounded-lg shadow-button">
+                Get started
+            </button>
+        </div>
+    </nav>
+
+    <!-- <div class="absolute h-full w-full flex justify-center">
+        <div class="grid grid-w-full gap-5 grid-cols-12 gap-1">
+            <div class="col-start-10 col-span-3 z-50">
+                <button class="text-black discord-button rounded-lg mb-9 absolute">
+                    Get started
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <main class="main-h-full w-full flex justify-center items-center relative">
+
+        <!-- SMALL PATTERNS -->
+        <div class="grid grid-w-full gap-5 grid-cols-12 gap-1 h-full absolute z-0">
+            <div class="col-start-1 col-span-1 relative">
+                <img src="./assets/patterns/main/BTC.png" class="absolute left-0" height="43" width="58"
+                    style="margin-top:107px;" />
+            </div>
+
+            <div class="col-start-3 col-span-1 relative">
+                <figure class="small-cube -right-4 absolute" style="margin-top: 61px;height: 75px;width: 75px;"></figure>
+                <p class="dollar-symbol text-left" style="margin-top: 171px;">$</p>
+                <img src="./assets/patterns/main/chart.png" width="60" height="68" class="absolute -right-4"
+                    style="margin-top: 285px;" />
+            </div>
+
+            <div class="col-start-6 col-span-1 relative">
+                <img src="./assets/patterns/main/plus.png" class="absolute -left-6" height="48" width="48"
+                    style="margin-top: 22px;" />
+            </div>
+
+            <div class="col-start-8 col-span-1 relative">
+                <img src="./assets/patterns/main/BTC.png" class="absolute right-0" height="43" width="58"
+                    style="margin-top:581px;" />
+            </div>
+
+            <div class="col-start-11 col-span-1 relative">
+                <img src="./assets/patterns/main/plus_big.png" class="absolute -left-8" height="64" width="64"
+                    style="margin-top: 72px;" />
+                <figure class="small-cube" style="margin-top: 476px;"></figure>
+            </div>
+
+            <div class="col-start-12 col-span-1 relative">
+                <img src="./assets/patterns/main/symbol.png" class="" height="44" width="34"
+                    style="margin-top: 367px;" />
+            </div>
+        </div>
+
+        <div class="w-full h-full absolute z-0">
+            <img src="./assets/patterns/main_left_pattern.png" height="500" width="500" class="absolute z-0"
+                style="top:136px;height:500px;width:500px;max-width:500px; left: -250px; display: inline-block;" />
+
+            <img src="./assets/patterns/main_right_pattern.png" height="500" width="500" class="absolute z-0"
+                style="top:-24px;height:500px;width:500px;max-width:500px; right: -250px; display: inline-block;" />
+        </div>
+
+        <div class="grid grid-w-full gap-5 grid-cols-12 gap-1 h-full relative">
+            <div class="col-start-1 col-span-2 flex">
+                <a href="#features" class="self-end flex items-center bottom-0 uppercase more-about">
+                    <img src="./assets/features_anchor.png" class="inline mr-2" height="14" width="10">
+                    More about the app
+                </a>
+            </div>
+
+            <div class="col-start-3 col-span-8 main-mt">
+                <h1 class="text-h1 text-center">
+                    Your Ultimate <br />
+                    Asset / Portfolio </br>
+                    Performance Insights
+                </h1>
+
+
+                <p class="text-default text-center mt-11">
+                    Say no to excel reports for your cryptocurrency investments tracking. <br />
+                    Make smart data-driven decisions to fuel your revenue growth with iQube.
+                </p>
+                <div class="w-full flex justify-center">
+                    <button class="h-11 shadow-default text-white bg-color-main w-42 rounded-lg mt-16">
+                        Get started
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <section id="features" class="section-h-full w-full flex justify-center items-center relative">
+        <div class="w-full h-full absolute">
+            <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" class="absolute"
+                style="bottom:-250px; left:-80px; height:500px;width:160px;" />
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+            <div class="col-start-1 col-span-6 self-center z-40">
+                <picture>
+                    <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">Security-First Approach</p>
+
+                <p class="text-default text-left mt-8">You, and only you, are in control of your assets. <br />
+                    iQube tracks them through a read-only API provided <br />
+                    by an Exchange.</p>
+
+                <figure class="mt-6 bg-color-main h-1 w-22 rounded-sm">
+                </figure>
+            </div>
+
+            <picture class="col-start-7 col-span-5 self-center">
+                <img height="455" width="455" src="./assets/features/security_first_approach.png" />
+            </picture>
+        </div>
+
+
+    </section>
+
+    <section class="section-h-full w-full flex justify-center items-center relative">
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full absolute z-0">
+            <div class="relative col-span-1 col-start-7 z-0">
+                <figure class="small-cube absolute -right-4 bottom-9" style="height: 75px; width: 75px; "> </figure>
+            </div>
+
+            <div class="relative col-span-1 col-start-12 z-0">
+                <figure class="small-cube absolute top-11" style="height: 75px; width: 75px; "> </figure>
+                <figure class="small-cube absolute top-11"
+                    style="height: 75px; width: 75px; top: 7.75rem; right: -77px"> </figure>
+                <figure class="small-cube absolute top-11" style="height: 75px; width: 75px; top: 508px"> </figure>
+            </div>
+
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full z-40">
+            <picture class="col-start-1 col-span-7 self-center">
+                <img height="424" width="455" src="./assets/features/multi_currency_support.png" />
+            </picture>
+            <div class="col-start-8 col-span-5 self-center">
+                <picture>
+                    <img height="42" width="42" src="./assets/features/multi_currency_support_cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">Multi-Currency Support <br />
+                    Without a Hassle</p>
+
+                <p class="text-default text-left mt-8">Track your portfolio performance in USD and BTC <br />
+                    with the ability to switch between calculation <br />
+                    methods (FIFO, LIFO, AVCO) in a fraction of a <br />
+                    second.
+                </p>
+                <figure class="mt-6 bg-color-main h-1 w-22 rounded-sm">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-h-full w-full flex justify-center items-center">
+        <div class="w-full h-full absolute">
+            <img src="assets/patterns/vertical_3_cube_right.png" width="160" height="500" class="absolute"
+                style="bottom:-80px; right:-80px; height:500px;width:160px;" />
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+            <div class="col-start-1 col-span-6 self-center z-40">
+                <picture>
+                    <img height="42" width="42" src="./assets/features/every_statoshi_counts_cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">Every Satoshi Counts</p>
+
+                <p class="text-default text-left mt-8">Specify the initial cost of each asset in your <br />
+                    Portfolio. Airdrops, staking, dividends, and dust are <br />
+                    accounted for. </p>
+
+                <figure class="mt-6 bg-color-main h-1 w-22 rounded-sm z-40">
+                </figure>
+            </div>
+
+            <picture class="col-start-7 col-span-5 self-center">
+                <img height="351" width="353" src="./assets/features/every_statoshi_counts.png" />
+            </picture>
+        </div>
+    </section>
+
+
+
+    <section class="section-h-full w-full flex justify-center items-center relative">
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full absolute z-0">
+            <div class="relative col-span-1 col-start-7 z-0">
+                <figure class="small-cube absolute -right-4 bottom-11" style="height: 75px; width: 75px; "> </figure>
+            </div>
+            <div class="relative col-span-1 col-start-8 z-0">
+                <figure class="small-cube absolute top-11" style="height: 75px; width: 75px; "> </figure>
+            </div>
+
+            <div class="relative col-span-1 col-start-11 z-0">
+                <figure class="small-cube absolute " style="bottom: 41px; height: 75px; width: 75px; "> </figure>
+            </div>
+
+            <div class="relative col-span-1 col-start-12 z-0">
+                <figure class="small-cube absolute" style="bottom: 121px; height: 75px; width: 75px; "> </figure>
+                <figure class="small-cube absolute" style="height: 75px; width: 75px; top:119px;"> </figure>
+            </div>
+
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+            <picture class="col-start-1 col-span-7 self-center">
+                <img height="334" width="380" src="./assets/features/data_driven.png" />
+            </picture>
+            <div class="col-start-8 col-span-5 self-center z-40">
+                <picture>
+                    <img height="42" width="42" src="./assets/features/data_driven_cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">Data-Driven Decisions.<br />
+                    Faster. Better.
+                </p>
+
+                <p class="text-default text-left mt-8">Build an efficient portfolio using features like Asset <br />
+                    Performance Assessment, Portfolio Performance <br /> Overview, and Rebalancing Assistant.
+                </p>
+
+                <figure class="mt-6 bg-color-main h-1 w-22 rounded-sm">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-h-full w-full flex justify-center items-center">
+        <div class="w-full h-full absolute">
+            <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" class="absolute"
+                style="bottom:-80px; left:-80px; height:500px;width:160px;" />
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+            <div class="col-start-1 col-span-6 self-center z-40">
+                <picture>
+                    <img height="42" width="42" src="./assets/features/share_portfolio_cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">Share Your Portfolio <br />
+                    Perfromance</p>
+
+                <p class="text-default text-left mt-8">Share your results with stakeholders/community <br />
+                    publicly or by link! You are in a full control of the <br />
+                    data you share! </p>
+
+                <figure class="mt-6 bg-color-main h-1 w-22 rounded-sm">
+                </figure>
+            </div>
+
+            <picture class="col-start-7 col-span-5 self-center">
+                <img height="455" width="455" src="./assets/features/share_portfolio.png" />
+            </picture>
+        </div>
+    </section>
+
+
+    <section class="section-h-full w-full flex justify-center items-center relative">
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full absolute z-0">
+            <div class="relative col-span-1 col-start-1 z-0">
+                <figure class="small-cube absolute" style="bottom:120px;height: 75px; width: 75px; ">
+                </figure>
+            </div>
+            <div class="relative col-span-1 col-start-2 z-0">
+                <figure class="small-cube absolute -left-4" style="bottom:200px;height: 75px; width: 75px; ">
+                </figure>
+            </div>
+
+            <div class="relative col-span-1 col-start-3 z-0">
+                <figure class="small-cube absolute" style="top:73px;height: 75px; width: 75px; ">
+                </figure>
+            </div>
+
+            <div class="relative col-span-1 col-start-12 z-0">
+                <figure class="small-cube absolute" style="top:145px;right:-150px;height: 75px; width: 75px; "> </figure>
+            </div>
+
+            
+
+        </div>
+
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full ">
+            <div class="col-span-4 col-start-1 mt-36 z-40">
+                <picture>
+                    <img height="42" width="42" src="./assets/cube.png" />
+                </picture>
+                <p class="text-h2 text-left section-header">FAQ's</p>
+
+                <p class="text-default text-left mt-8">You might be wondering</p>
+            </div>
+
+            <div class="col-span-8 col-start-5 mt-36 bg-color-main w-full z-40" style="height: 429px;">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section-h-full w-full flex justify-center items-center bg-color-main">
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+            <div class="col-start-3 col-span-8 mt-75">
+                <p class="text-cta text-white text-center">
+                    Start tracking your <br />crypto-trades for free now
+                </p>
+
+                <p class="text-default text-center text-white mt-8">Join iQube to track your positive/negative profits
+                    <br />
+                    and assets statistics according to portfolios and wallets.
+                </p>
+
+                <div class="w-full flex justify-center">
+                    <button class="h-11 bg-white w-42 rounded-lg mt-14 shadow-default">
+                        Start for free
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-h-full w-full flex justify-center items-center footer-bg">
+        <div class="grid gap-5 grid-w-full grid-cols-12 h-full footer-pt ">
+            <div class="col-start-1 col-span-2">
+                <div class="flex items-center">
+                    <picture>
+                        <img class="inline" height="42" width="42" src="./assets/logo_cube.png" />
+                    </picture>
+                    <p class="ml-4 inline footer-text-app text-white relative">
+                        iQube
+                        <span class="absolute text-center -top-2 beta-badge">
+                            beta
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-start-3 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Product</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-start-5 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Product</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-start-7 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Product</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-start-9 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Product</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-start-11 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Product</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

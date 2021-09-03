@@ -1,0 +1,14 @@
+.nav-list-item{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.shadow-button{
+    filter: drop-shadow(0px 8px 16px rgba(67, 91, 96, 0.16));
+    font-size: 16px;
+    line-height: auto;
+    font-weight: 600;
+    height: 44px;
+}
