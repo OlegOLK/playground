@@ -20,8 +20,8 @@
 </head>
 
 <body class="min-h-screenrelative">
-    <nav class="h-12 md:h-28 bg-white w-screen md:w-full flex justify-center items-center z-50 fixed top-0 opacity-70">
-        <div class="hidden md:grid gap-5 grid-w-full grid-cols-4 md:grid-cols-12 ">
+    <nav class="h-12 md:h-28 bg-white w-screen xl:w-full flex justify-center items-center z-50 fixed top-0 opacity-70">
+        <div class="hidden xl:grid gap-5 grid-w-full grid-cols-6 xl:grid-cols-12 ">
             <div class="col-start-1 col-span-2">
                 <div class="flex items-center ">
                     <picture>
@@ -64,7 +64,48 @@
                 Get started
             </button>
         </div>
-        <div class="grid md:hidden gap-5 grid-w-full grid-cols-4">
+
+
+        <div class="hidden lg:flex xl:hidden 2xl:hidden items-center justify-between grid-w-full">
+
+            <div class="flex items-center">
+                <picture>
+                    <img class="inline" height="32" width="32" src="./assets/logo_cube.png" />
+                </picture>
+                <p class="ml-4 inline footer-text-app relative">
+                    iQube
+                    <span class="absolute text-center text-white -top-2 beta-badge">
+                        beta
+                    </span>
+                </p>
+            </div>
+
+            <div class="space-x-8">
+                <a class="col-start-5 col-span-1 text-center self-center justify-self-center nav-list-item">
+                    Features
+                </a>
+                <a class="col-start-6 col-span-1 text-center self-center justify-self-center nav-list-item">
+                    Pricing
+                </a>
+
+                <a class="col-start-7 col-span-1 text-center self-center justify-self-center nav-list-item">
+                    Contacts
+                </a>
+                <button class="col-start-8 col-span-1 nav-list-item ">
+                    <p class="flex items-center color-main justify-end">
+                        <img src="./assets/globe.png" height="17" width="16" class="inline mr-2">
+                        EN
+                    </p>
+                </button>
+            </div>
+       
+            <button style="width: 147px;" class="h-11 col-start-11 col-span-2 bg-color-main text-white rounded-lg shadow-button">
+                Get started
+            </button>
+
+        </div>
+
+        <div class="grid lg:hidden gap-5 grid-w-full grid-cols-4">
             <div class="col-start-1 col-span-2">
                 <div class="flex items-center ">
                     <picture>
@@ -133,7 +174,7 @@
             </div>
         </div>
 
-        <div class="hidden	sm:block w-full h-full absolute z-0">
+        <div class="hidden	xl:block w-full h-full absolute z-0">
             <img src="./assets/patterns/main_left_pattern.png" height="500" width="500" class="absolute z-0"
                 style="top:136px;height:500px;width:500px;max-width:500px; left: -250px; display: inline-block;" />
 
@@ -163,7 +204,7 @@
                 </p>
                 <div class="w-full flex justify-center">
                     <button
-                        class="h-11 shadow-default text-white bg-color-main w-11/12 sm:w-42 rounded-lg mt-12 sm:mt-14">
+                        class="h-11 shadow-default text-white bg-color-main get-started-button rounded-lg mt-12 sm:mt-14">
                         Get started
                     </button>
                 </div>
@@ -343,7 +384,7 @@
 
                     <p class="text-default text-center text-white mt-8">Join iQube to track your <br />positive/negative
                         profits
-                        
+
                         and <br /> assets statistics according to <br />portfolios and wallets.
                     </p>
 
@@ -356,15 +397,17 @@
             </div>
         </div>
     </div>
+
+
     <div class="hidden md:block">
         <section id="features" class="section-h-full w-full flex justify-center items-center relative">
-            <div class="hidden md:absolute w-full h-full absolute">
+            <div class="hidden xl:absolute w-full h-full absolute">
                 <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" class="absolute"
                     style="bottom:-250px; left:-80px; height:500px;width:160px;" />
             </div>
 
-            <div class="grid gap-5 grid-w-full grid-cols-4 md:grid-cols-12 h-full">
-                <div class="col-start-1 col-span-4 md:col-span-6 self-center z-40">
+            <div class="grid gap-5 grid-w-full grid-cols-12 h-full">
+                <div class="col-start-1  col-span-6 self-center z-40">
                     <picture>
                         <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
                     </picture>
@@ -378,7 +421,7 @@
                     </figure>
                 </div>
 
-                <picture class="col-start-1 col-span-4 md:col-start-7 md:col-span-5 self-center" style="grid-row: 1">
+                <picture class="col-start-7 col-span-5 self-center" style="grid-row: 1">
                     <img height="455" width="455" class="" src="./assets/features/security_first_approach.png" />
                 </picture>
             </div>
@@ -431,7 +474,7 @@
 
 
         <section class="section-h-full w-full flex justify-center items-center">
-            <div class="w-full h-full absolute">
+            <div class="w-full h-full hidden xl:absolute">
                 <img src="assets/patterns/vertical_3_cube_right.png" width="160" height="500" class="absolute"
                     style="bottom:-250px; right:-80px; height:500px;width:160px;" />
             </div>
@@ -512,7 +555,7 @@
 
 
         <section class="section-h-full w-full flex justify-center items-center">
-            <div class="w-full h-full absolute">
+            <div class="w-full h-full hidden xl:absolute">
                 <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" class="absolute"
                     style="bottom:-250px; left:-80px; height:500px;width:160px;" />
             </div>
@@ -605,8 +648,8 @@
         </section>
     </div>
 
-    <footer class="footer-h-full w-full flex justify-center items-center footer-bg">
-        <div class="grid gap-5 grid-w-full grid-cols-12 h-full footer-pt ">
+    <footer class="footer-h-full w-full flex justify-center flex-wrap items-center footer-bg">
+        <div class="hidden md:grid gap-5 grid-w-full grid-cols-12 h-full footer-pt ">
             <div class="col-start-1 col-span-2">
                 <div class="flex items-center">
                     <picture>
@@ -638,7 +681,7 @@
             </div>
 
             <div class="col-start-5 col-span-2 footer-list-mt">
-                <p class="mb-3 footer-list-header-text">Product</p>
+                <p class="mb-3 footer-list-header-text">Company</p>
 
                 <ul class="space-y-2 text-white footer-list-item-text">
                     <li>
@@ -654,7 +697,7 @@
             </div>
 
             <div class="col-start-7 col-span-2 footer-list-mt">
-                <p class="mb-3 footer-list-header-text">Product</p>
+                <p class="mb-3 footer-list-header-text">Contacts</p>
 
                 <ul class="space-y-2 text-white footer-list-item-text">
                     <li>
@@ -670,6 +713,59 @@
             </div>
 
             <div class="col-start-9 col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Mobile</p>
+
+                <button class="bg-none">
+                    <img src="/assets/google_play.png" width="117" height="29">
+                </button>
+                <button class="bg-none pt-2">
+                    <img src="/assets/app_store.png" width="111" height="30">
+                </button>
+            </div>
+
+            <div class="col-start-11 col-span-1 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Social</p>
+
+                <a><img src="/assets/icons/twitter.svg" height="13" width="16" class="inline" /></a>
+                <a><img src="/assets/icons/linkedin-in.svg" height="14" width="14" class="inline"
+                        style="margin-left: 10px;" /></a>
+                <a><img src="/assets/icons/telegram-plane.svg" height="11.74" width="14" class="inline"
+                        style="margin-left: 10px;" /></a>
+            </div>
+
+            <div class="col-start-12 col-span-1">
+                <button class="bg-none footer-top-button flex justify-center items-center">
+                    <img src="/assets/icons/arrow-top.svg" height="8" width="8">
+                </button>
+
+            </div>
+        </div>
+
+
+        <div style="margin-bottom: 71px;"
+            class="grid md:hidden grid-flow-row gap-5 grid-w-full grid-cols-4 h-full footer-pt ">
+            <div class="col-start-1 col-span-2">
+                <div class="flex items-center">
+                    <picture>
+                        <img class="inline" height="32" width="32" src="./assets/logo_cube.png" />
+                    </picture>
+                    <p class="ml-4 inline footer-text-app text-white relative">
+                        iQube
+                        <span class="absolute text-center -top-2 beta-badge">
+                            beta
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-start-4 col-span-1">
+                <button class="bg-none footer-top-button flex justify-center items-center">
+                    <img src="/assets/icons/arrow-top.svg" height="8" width="8">
+                </button>
+
+            </div>
+
+            <div class="col-span-2 footer-list-mt">
                 <p class="mb-3 footer-list-header-text">Product</p>
 
                 <ul class="space-y-2 text-white footer-list-item-text">
@@ -685,8 +781,8 @@
                 </ul>
             </div>
 
-            <div class="col-start-11 col-span-2 footer-list-mt">
-                <p class="mb-3 footer-list-header-text">Product</p>
+            <div class="col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Company</p>
 
                 <ul class="space-y-2 text-white footer-list-item-text">
                     <li>
@@ -700,6 +796,49 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Contacts</p>
+
+                <ul class="space-y-2 text-white footer-list-item-text">
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        How it works
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Mobile</p>
+
+                <button class="bg-none">
+                    <img src="/assets/google_play.png" width="117" height="29">
+                </button>
+                <button class="bg-none pt-2">
+                    <img src="/assets/app_store.png" width="111" height="30">
+                </button>
+            </div>
+
+            <div class="col-span-1 footer-list-mt">
+                <p class="mb-3 footer-list-header-text">Social</p>
+
+                <a><img src="/assets/icons/twitter.svg" height="13" width="16" class="inline" /></a>
+                <a><img src="/assets/icons/linkedin-in.svg" height="14" width="14" class="inline"
+                        style="margin-left: 5px;" /></a>
+                <a><img src="/assets/icons/telegram-plane.svg" height="11.74" width="14" class="inline"
+                        style="margin-left: 5px;" /></a>
+            </div>
+
+
+        </div>
+
+        <div class="bottom-0 footer-copyrights-border w-full flex justify-center items-center" style="height: 34px;">
+            <p class="text-center footer-copyrights">©2021 - iQube | All rights reserved</p>
         </div>
     </footer>
 </body>
