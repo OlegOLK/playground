@@ -1,0 +1,48 @@
+.footer {
+    min-height: 20.2rem;
+}   
+
+.bg{
+    background-color: #4C4C4C;
+}
+
+.pt{
+    padding-top: 3.75rem;
+}
+
+.listMt{
+    margin-top: 14px;;
+}
+
+.listHeader{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #A1AEB7;
+    text-transform: uppercase;
+}
+
+.listItem{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.topButton{
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 32px;
+    height: 32px;
+}
+
+.copyrights{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color:#A1AEB7;
+}
+
+.copyrightsBorder{
+    border-top: #A1AEB7 1px solid;
+}

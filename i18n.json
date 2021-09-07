@@ -1,0 +1,13 @@
+{
+    "locales": ["en", "ru"],
+    "defaultLocale": "en",
+    "pages": {
+      "/404": ["error"],
+      "/": ["home"],
+      "/pricing": ["home"],
+      "/signup": ["home"],
+      "/signin": ["home"],
+      "/features/[slug]": ["home"],
+      "/features": ["home"]
+    }
+  }
