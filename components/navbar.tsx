@@ -1,7 +1,10 @@
 import Grid from "./gird";
 import styles from '../styles/Navbar.module.css'
 import cx from 'classnames';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Popover, Transition } from '@headlessui/react'
+import { Fragment } from 'react'
+import { MenuIcon } from "@heroicons/react/solid";
 
 const MenuItems: string[] = [
     "Features",
@@ -25,7 +28,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={cx("h-14 lg:h-28 bg-white w-screen flex justify-center items-center z-50 fixed top-0",
+        <nav className={cx("h-14 lg:h-28 bg-white w-screen flex justify-between lg:justify-center items-center z-50 fixed top-0",
             scrollPosition != 0 ? "shadow-none lg:shadow-lg" : '')}>
             {/* Laptop + Desktop */}
             <Grid additionalStyles="hidden xl:grid">
@@ -74,10 +77,7 @@ export default function Navbar() {
                 </button>
             </Grid>
 
-
-            {/* </div> */}
-
-
+            {/* Tablet */}
             <Grid additionalStyles="hidden lg:flex xl:hidden 2xl:hidden items-center justify-between grid-w-full">
 
                 <div className="flex items-center">
@@ -120,7 +120,62 @@ export default function Navbar() {
                 </button>
             </Grid>
 
-            <Grid additionalStyles="lg:hidden">
+
+
+            <Popover className="block lg:hidden w-screen">
+                <Grid>
+                    <div className="col-start-1 col-span-2 flex items-center">
+                        <picture>
+                            <img className="inline" height="32" width="32" src="./assets/logo_cube.png" />
+                        </picture>
+                        <p className="ml-4 inline app-banner relative">
+                            iQube
+                            <span className="absolute text-center text-white -top-2 beta-badge">
+                                beta
+                            </span>
+                        </p>
+                    </div>
+
+                    <Popover.Button className="col-start-4 col-span-1 flex justify-end content-center items-center h-full">
+                        <span className="sr-only">Open menu</span>
+                        <img src="/assets/icons/menu.svg" aria-hidden="true" />
+                        {/* <MenuIcon className="h-6 w-6" aria-hidden="true" /> */}
+                    </Popover.Button>
+                </Grid>
+
+
+                <Transition
+                    as={Fragment}
+                    enter="duration-200 ease-out"
+                    enterFrom="opacity-0 scale-100"
+                    enterTo="opacity-100 scale-100"
+                    leave="duration-100 ease-in"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                >
+                    <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right md:hidden">
+                        {
+                            <div className="flex flex-col items-center mt-28 text-white space-y-8" >
+                                <a href="/features" className="secondary-menu cursor-pointer no-underline hover:underline">{'Features'}</a>
+                                <a href="/pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{'Pricing'}</a>
+                                <a href="/contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{'Contact'}</a>
+
+                                {/* <div className="col-start-9 col-span-1 self-center justify-self-end">
+                                    <LanguageSwitcher reverseColor={true} />
+                                </div> */}
+
+                                <a
+                                    href="/signup"
+                                    className="self-center col-span-2 ripple shadow-lg w-44 py-3 text-center text-base font-semibold bg-white rounded-lg color-main ">
+                                    Get Started
+                                </a>
+                            </div>
+                        }
+                    </Popover.Panel>
+                </Transition>
+            </Popover >
+
+            {/* <Grid additionalStyles="lg:hidden">
                 <div className="col-start-1 col-span-2 flex items-center">
                     <picture>
                         <img className="inline" height="32" width="32" src="./assets/logo_cube.png" />
@@ -135,7 +190,7 @@ export default function Navbar() {
                 <button className="col-start-4 col-span-1 flex justify-end content-center items-center h-full">
                     <img src="/assets/icons/menu.svg" />
                 </button>
-            </Grid>
+            </Grid> */}
         </nav>
     )
 }
