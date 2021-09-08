@@ -3,6 +3,7 @@ import cx from 'classnames'
 import Grid from './gird'
 import React, { ReactNode } from 'react'
 import AppBanner from './lib/app.banner'
+import useTranslation from 'next-translate/useTranslation'
 
 type Breadcrumb = {
     header: string;
@@ -12,31 +13,31 @@ type Breadcrumb = {
 
 const Breadcrumbs: Breadcrumb[] = [
     {
-        header: "Product",
+        header: "product",
         subHeaders: [
-            "Features",
-            "How it works",
-            "Pricing"
+            "features",
+            "how it works",
+            "pricing"
         ]
     },
     {
-        header: "Company",
+        header: "company",
         subHeaders: [
-            "Our team",
-            "Policies",
-            "Terms and conditions"
+            "our team",
+            "policies",
+            "terms and conditions"
         ]
     },
     {
-        header: "Contacts",
+        header: "contacts",
         subHeaders: [
-            "info@iqbue.app",
-            "123321321",
-            "12321321"
+            "email",
+            "phone",
+            "address"
         ]
     },
     {
-        header: "Mobile",
+        header: "mobile",
         node: (
             <div className="flex flex-col">
                 <button className="bg-none">
@@ -49,7 +50,7 @@ const Breadcrumbs: Breadcrumb[] = [
         )
     },
     {
-        header: "Social",
+        header: "social",
         node: (
             <div key={"menu-link"} className="flex flex-row lg:flex-col xl:flex-row ">
                 <a key={"a-menu-link-1"}><img src="/assets/icons/twitter.svg" height="13" width="16" className="inline" /></a>
@@ -61,6 +62,7 @@ const Breadcrumbs: Breadcrumb[] = [
 ]
 
 export default function Footer() {
+    const { t } = useTranslation('home')
     function getProperIndex(index) {
         var updated = 1 + index * 2;
         return updated > 4 ? updated % 4 : updated;
@@ -80,7 +82,7 @@ export default function Footer() {
                                 index == 4 ? 'col-span-1' : "col-span-2",
                                 styles.listMt)}
                                 key={"head-" + index + item.header}>
-                                <p key={"p-" + index + item.header} className={cx("mb-3", styles.listHeader)}>{item.header}</p>
+                                <p key={"p-" + index + item.header} className={cx("mb-3", styles.listHeader)}>{t(item.header)}</p>
                                 {
                                     item.subHeaders ? (
                                         <ul
@@ -89,8 +91,8 @@ export default function Footer() {
                                             {
                                                 item.subHeaders.map((sub, index) => {
                                                     return (
-                                                        <li key={"sub-" + index + item.header}>
-                                                            {sub}
+                                                        <li className="capitalize" key={"sub-" + index + item.header}>
+                                                            {t(sub)}
                                                         </li>
                                                     )
                                                 })

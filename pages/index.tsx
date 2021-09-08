@@ -19,21 +19,17 @@ export default function Home() {
       <div className="fixed lg:bottom-2 2xl:bottom-12 right-24 z-50 hidden lg:block">
         <Disctord />
       </div>
-      <Main 
-      header="Your Ultimate
-      Asset / Portfolio 
-      Performance Insights"
-      subHeader="Say no to excel reports for your cryptocurrency investments tracking.
-      Make smart data-driven decisions to fuel your revenue growth with iQube." />
+
+      <Main
+        header={t('MainHeader')}
+        subHeader={t('MainSubheader')} />
 
       <div id="features"></div>
       {/* Features */}
       <Section
         index={1}
-        header="Security-First Approach"
-        subHeader="You, and only you, are in control of your assets.
-      iQube tracks them through a read-only API provided
-      by an Exchange."
+        header={t(`feature1header`)}
+        subHeader={t(`feature1subheader`)}
         ltr={true}
         imgSrc="./assets/features/security_first_approach.png"
         imgAlt="Security-First Approach image"
@@ -51,12 +47,8 @@ export default function Home() {
 
       <Section
         index={2}
-        header="Multi-Currency Support
-        Without a Hassle"
-        subHeader="Track your portfolio performance in USD and BTC
-        with the ability to switch between calculation
-        methods (FIFO, LIFO, AVCO) in a fraction of a
-        second."
+        header={t(`feature2header`)}
+        subHeader={t(`feature2subheader`)}
         ltr={false}
         imgSrc="./assets/features/multi_currency_support.png"
         imgAlt="Multi-Currency Support image"
@@ -72,10 +64,8 @@ export default function Home() {
 
       <Section
         index={3}
-        header="Every Satoshi Counts"
-        subHeader="Specify the initial cost of each asset in your
-        Portfolio. Airdrops, staking, dividends, and dust are
-        accounted for."
+        header={t(`feature3header`)}
+        subHeader={t(`feature3subheader`)}
         ltr={true}
         imgSrc="./assets/features/every_statoshi_counts.png"
         imgAlt="Every Satoshi Counts image"
@@ -94,10 +84,8 @@ export default function Home() {
 
       <Section
         index={4}
-        header="Data-Driven Decisions"
-        subHeader="Build an efficient portfolio using features like Asset
-        Performance Assessment, Portfolio Performance 
-        Overview, and Rebalancing Assistant."
+        header={t(`feature4header`)}
+        subHeader={t(`feature4subheader`)}
         ltr={false}
         imgSrc="/assets/features/data_driven.png"
         imgAlt="Data-Driven Decisions image"
@@ -113,11 +101,8 @@ export default function Home() {
 
       <Section
         index={5}
-        header="Share Your Portfolio
-        Perfromance"
-        subHeader="Share your results with stakeholders/community
-        publicly or by link! You are in a full control of the
-        data you share!"
+        header={t(`feature5header`)}
+        subHeader={t(`feature5subheader`)}
         ltr={true}
         imgSrc="./assets/features/share_portfolio.png"
         imgAlt="Share Your Portfolio image"

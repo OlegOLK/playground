@@ -4,7 +4,7 @@ import Main from '../components/main'
 import Footer from '../components/footer';
 import Disctord from '../components/lib/discord.button'
 
-export default function Features() {
+export default function Contact() {
   const { t } = useTranslation('home')
   return (
     <>

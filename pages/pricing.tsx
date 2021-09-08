@@ -20,10 +20,8 @@ export default function Pricing() {
         <Disctord />
       </div>
       <Main 
-      header="Our pricing is simple.
-      It's free :)"
-      subHeader="Matematically percise tracking of your investments available via
-      IQube app. Just try."/>
+      header={t('pricingHeading')}
+      subHeader={t('pricingSubHeading')}/>
       <Footer />
     </>
   )

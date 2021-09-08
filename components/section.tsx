@@ -18,12 +18,7 @@ type Props = {
 function GridSection({ header, cube, imgAlt, imgSrc, subHeader, ltr, index, verticalCubes }: Props) {
     return (
         <>
-            {verticalCubes}
-            {/* <div className="absolute lg:hidden w-full h-full">
-                <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" className="absolute"
-                    style={{ bottom: "-250px", left: "-80px", height: "500px", width: "160px" }} />
-            </div> */}
-
+            {verticalCubes}           
             <Grid additionalStyles="h-full" >
                 <div className={cx(ltr ? 'col-start-1' : 'col-start-8', "col-span-5 self-center z-40")}>
                     <picture>

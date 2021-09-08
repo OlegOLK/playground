@@ -1,6 +1,9 @@
 import cx from 'classnames';
 import styles from '../styles/Main.module.css';
 import Grid from './gird';
+import useTranslation from 'next-translate/useTranslation'
+import { NavigateToApp } from '../lib/navigate.to.app';
+import { useRouter } from 'next/router'
 
 type Props = {
     header: string,
@@ -8,6 +11,11 @@ type Props = {
 }
 
 export default function Main({header, subHeader}: Props) {
+    const { t } = useTranslation('home')
+    const router = useRouter();
+    const goToApp = function () {
+        NavigateToApp(router, "https://inside.iqube.app");
+    }
     return (
         <main className={cx("w-full flex justify-center items-center relative", styles.main)}>
 
@@ -56,13 +64,13 @@ export default function Main({header, subHeader}: Props) {
                 <img src="./assets/patterns/main_right_pattern.png" height="500" width="500" className="absolute z-0"
                     style={{ top: "-24px", height: "500px", width: "500px", maxWidth: "500px", right: "-250px", display: "inline-block" }} />
             </div>
-
+            
             {/* Main content */}
             <Grid additionalStyles="h-full relative">
                 <div className="hidden absolute lg:block left-0 bottom-0">
                     <a href="#features" className={cx("flex items-center uppercase", styles.moreAbout)}>
-                        <img src="./assets/features_anchor.png" className="inline mr-2" height="14" width="10"></img>
-                        More about the app
+                        <img src="./assets/features_anchor.png" alt="button scroll to content" className="inline mr-2" height="14" width="10"></img>
+                        {t('MORE ABOUT THE APP')}
                     </a>
                 </div>
 
@@ -78,16 +86,17 @@ export default function Main({header, subHeader}: Props) {
                     </p>
                     <div className="w-full flex justify-center">
                         <button
+                        onClick={goToApp}
                             className={cx("h-11 shadow-default text-white bg-color-main rounded-lg mt-12 sm:mt-14", styles.button)}>
-                            Get started
+                            {t('Get Started')}
                         </button>
                     </div>
 
                 </div>
                 <div className="col-start-1 col-span-4 flex lg:hidden justify-center">
                     <a href="#features" className={cx("flex items-center bottom-0 uppercase", styles.moreAbout)}>
-                        <img src="./assets/features_anchor.png" className="inline mr-2" height="14" width="10"></img>
-                        More about the app
+                        <img src="./assets/features_anchor.png" alt="button scroll to content" className="inline mr-2" height="14" width="10"></img>
+                        {t('MORE ABOUT THE APP')}
                     </a>
                 </div>
             </Grid>

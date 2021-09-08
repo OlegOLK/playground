@@ -8,6 +8,7 @@
       "/signup": ["home"],
       "/signin": ["home"],
       "/features/[slug]": ["home"],
-      "/features": ["home"]
+      "/features": ["home"],
+      "/contact": ["home"]
     }
   }

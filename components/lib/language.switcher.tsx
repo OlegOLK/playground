@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
+import setLanguage from 'next-translate/setLanguage';
 import { Listbox, Transition } from '@headlessui/react'
 import cx from 'classnames';
 import styles from '../../styles/Navbar.module.css'
@@ -19,9 +20,9 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
     const router = useRouter();
     const { locale } = router;
 
-    function handleChange(value: string) {
+   async function handleChange(value: string) {
         setSelected(value)
-        router.push('/', null, ({ locale: value.toLowerCase() }));
+        setLanguage(value.toLowerCase());
     }
 
     return (
