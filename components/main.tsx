@@ -2,7 +2,12 @@ import cx from 'classnames';
 import styles from '../styles/Main.module.css';
 import Grid from './gird';
 
-export default function Main() {
+type Props = {
+    header: string,
+    subHeader: string
+}
+
+export default function Main({header, subHeader}: Props) {
     return (
         <main className={cx("w-full flex justify-center items-center relative", styles.main)}>
 
@@ -10,13 +15,13 @@ export default function Main() {
             <Grid additionalStyles="h-full absolute z-0 w-full">
                 <div className="col-start-1 col-span-1 relative">
                     <img src="./assets/patterns/main/BTC.png" className="absolute left-0" height="43" width="58"
-                        style={{ marginTop: "107px;" }} ></img>
+                        style={{ marginTop: "107px" }} ></img>
                 </div>
 
                 <div className="col-start-1 lg:col-start-3 col-span-1 relative">
                     <figure className="hidden lg:block small-cube -right-4 absolute" style={{ marginTop: "61px", height: "75px", width: "75px" }}>
                     </figure>
-                    <p className="hidden lg:block dollar-symbol text-left" style={{ marginTop: "171px;" }}>$</p>
+                    <p className="hidden lg:block dollar-symbol text-left" style={{ marginTop: "171px" }}>$</p>
                     <img src="./assets/patterns/main/chart.png" width="60" height="68" className="absolute -right-4"
                         style={{ marginTop: "285px" }} />
                 </div>
@@ -63,15 +68,13 @@ export default function Main() {
 
                 <div className={cx("col-start-1 col-span-4 lg:col-start-3 lg:col-span-8", styles.mt)}>
                     <h1 className="h1 text-center">
-                        Your Ultimate <br />
-                        Asset / Portfolio <br />
-                        Performance Insights
+                        {header}
+                        
                     </h1>
 
 
                     <p className="text-default text-center mt-7 sm:mt-9">
-                        Say no to excel reports for your cryptocurrency investments tracking. <br />
-                        Make smart data-driven decisions to fuel your revenue growth with iQube.
+                        {subHeader}
                     </p>
                     <div className="w-full flex justify-center">
                         <button

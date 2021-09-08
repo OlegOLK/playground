@@ -2,7 +2,7 @@ import styles from '../styles/Section.module.css'
 import cx from 'classnames'
 import Grid from './gird'
 import React from 'react'
-import { Accordion } from './accordion'
+import { Accordion } from './lib/accordion'
 
 export default function Faq() {
     return (

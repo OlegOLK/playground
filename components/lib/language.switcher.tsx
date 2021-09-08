@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { Listbox, Transition } from '@headlessui/react'
 import cx from 'classnames';
 import styles from '../../styles/Navbar.module.css'
+import Image from 'next/image';
 
 import i18nConfig from '../../i18n.json';
 const locales = i18nConfig.locales.map(lc => lc.toUpperCase());
@@ -24,30 +25,14 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
     }
 
     return (
-
-        //     <button className={cx("col-start-8 col-span-1", styles.navListItem)}>
-        //     <p className="flex items-center color-main justify-end">
-        //         <img src="./assets/globe.png" height="17" width="16" className="inline mr-2"></img>
-        //         EN
-        //     </p>
-        // </button>
-        // flex items-center justify-center
         <div className="col-start-8 col-span-1 flex items-center">
             <Listbox value={selected} onChange={handleChange}>
-                {/* <div className="relative mt-1"> */}
-                <Listbox.Button className={cx(styles.navListItem)}>
-                    <p className=" color-main justify-end">
-                        <img src="./assets/globe.png" height="17" width="16" className="inline mr-2"></img>
-                        EN
+
+                <Listbox.Button aria-label="Language switcher" className={cx(styles.navListItem)}>
+                    <p className="color-main justify-end">
+                        <img  src="/assets/globe.png" height="17" width="16" className="inline-block mr-2" />
+                        {selected}
                     </p>
-                    {/* <img
-                    src="/assets/test/globe.svg"
-                    className="text-gray-400 main-color"
-                    height={16}
-                    width={16}
-                    aria-hidden="true"
-                />
-                <span className="block ml-2 right-0 uppercase">{selected}</span> */}
 
                 </Listbox.Button>
                 <Transition
@@ -56,7 +41,7 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <Listbox.Options style={{bottom: "-35px", marginLeft:"-10px"}} className="absolute w-16 overflow-auto text-base bg-white shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options style={{bottom: "-30px"}} className="absolute w-16 overflow-auto text-base bg-white shadow-lg max-h-60 sm:text-sm">
                         {locales.map((locale, localeIdx) => (
                             <Listbox.Option
                                 key={localeIdx}
@@ -71,7 +56,7 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
                                 {({ selected, active }) => (
                                     <>
                                         <span
-                                            className={`${selected ? 'font-medium bg-main-color text-white' : 'font-normal'
+                                            className={`${selected ? 'font-medium bg-color-main rounded-sm text-white' : 'font-normal'
                                                 } block truncate py-2`}
                                         >
                                             {locale}

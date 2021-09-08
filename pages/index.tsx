@@ -10,12 +10,21 @@ import Section from '../components/section'
 import Faq from '../components/faq'
 import Cta from '../components/cta'
 import Footer from '../components/footer';
+import Disctord from '../components/lib/discord.button'
 
 export default function Home() {
   const { t } = useTranslation('home')
   return (
     <>
-      <Main />
+      <div className="fixed lg:bottom-2 2xl:bottom-12 right-24 z-50 hidden lg:block">
+        <Disctord />
+      </div>
+      <Main 
+      header="Your Ultimate
+      Asset / Portfolio 
+      Performance Insights"
+      subHeader="Say no to excel reports for your cryptocurrency investments tracking.
+      Make smart data-driven decisions to fuel your revenue growth with iQube." />
 
       <div id="features"></div>
       {/* Features */}
@@ -30,7 +39,7 @@ export default function Home() {
         imgAlt="Security-First Approach image"
         cube={
           <div className="relative">
-          <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
+            <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
           </div>
         }
         verticalCubes={

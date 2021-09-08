@@ -108,9 +108,9 @@ export default function Footer() {
                 }
 
                 <div className="block col-start-12 col-span-1">
-                    <button className={cx("bg-none flex justify-center items-center", styles.topButton)}>
+                    <a href="#" className={cx("bg-none flex justify-center items-center", styles.topButton)}>
                         <img src="/assets/icons/arrow-top.svg" height="8" width="8" />
-                    </button>
+                    </a>
 
                 </div>
             </Grid>
@@ -121,9 +121,9 @@ export default function Footer() {
                         <AppBanner hFull={false} inverse={true} />
                     </div>
                     <div className="flex col-start-4 col-span-1 justify-end">
-                        <button className={cx("bg-none flex justify-center items-center", styles.topButton)}>
+                        <a href="#" className={cx("bg-none flex justify-center items-center", styles.topButton)}>
                             <img src="/assets/icons/arrow-top.svg" height="8" width="8" />
-                        </button>
+                        </a>
                     </div>
 
                     {

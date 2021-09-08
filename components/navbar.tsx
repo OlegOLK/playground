@@ -8,9 +8,9 @@ import AppBanner from "./lib/app.banner";
 import LanguageSwitcher from "./lib/language.switcher";
 
 const MenuItems: string[] = [
-    "Features",
-    "Pricing",
-    "Contacts"
+    "features",
+    "pricing",
+    "contacts"
 ]
 
 export default function Navbar() {
@@ -37,19 +37,45 @@ export default function Navbar() {
                     <AppBanner />
                 </div>
 
-                {
+
+                <a 
+                    href={"/"+ MenuItems[0]}
+                    key={"menu-item-1"}
+                    className={cx(
+                        `text-uppercase col-start-5 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {MenuItems[0]}
+                </a>
+
+                <a 
+                href={"/"+ MenuItems[1]}
+                    key={"menu-item-2"}
+                    className={cx(
+                        ` col-start-6 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {MenuItems[1]}
+                </a>
+                <a
+                href={"/"+ MenuItems[2]}
+                    key={"menu-item-3"}
+                    className={cx(
+                        ` col-start-7 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {MenuItems[2]}
+                </a>
+                {/* {
                     MenuItems.map((item, index) => {
                         return (
                             <a
                                 key={"menu-item-" + index}
                                 className={cx(
-                                    `col-span-1 text-center self-center justify-self-center col-start-${5 + index}`,
+                                    ` col-start-${5 + index} col-span-1 text-center self-center justify-self-center`,
                                     styles.navListItem)}>
                                 {item}
                             </a>
                         )
                     })
-                }
+                } */}
                 <LanguageSwitcher />
                 {/* <button className={cx("col-start-8 col-span-1", styles.navListItem)}>
                     <p className="flex items-center color-main justify-end">

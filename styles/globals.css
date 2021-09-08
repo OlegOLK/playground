@@ -63,6 +63,12 @@ a {
   line-height: 24px;
 }
 
+.beta-badge-wrapper{
+  width: 35px;
+  height: 18px;
+  background: #592FFF;
+  border-radius: 2px;
+}
 .beta-badge {
   font-weight: 600;
   font-size: 10px;
