@@ -1,5 +1,5 @@
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .main {
         margin-top: 138px;
         height: 606px;
@@ -7,19 +7,6 @@
     }   
     .button{
         width: 90%;
-    }
-}
-
-@media (min-width: 768px) {
-    .main {
-        margin-top: 112px;
-        height: 38rem;
-    }
-    .mt{
-        margin-top: 4.5rem;
-    }
-    .button{
-        width: 170px;
     }
 }
 

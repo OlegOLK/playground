@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { MenuIcon } from "@heroicons/react/solid";
+import AppBanner from "./lib/app.banner";
 
 const MenuItems: string[] = [
     "Features",
@@ -32,24 +33,18 @@ export default function Navbar() {
             scrollPosition != 0 ? "shadow-none lg:shadow-lg" : '')}>
             {/* Laptop + Desktop */}
             <Grid additionalStyles="hidden xl:grid">
-                <div className="col-start-1 col-span-2 flex items-center">
-                    <picture>
-                        <img className="inline" height="32" width="32" src="./assets/logo_cube.png" ></img>
-                    </picture>
-                    <p className={cx("ml-4 inline app-banner relative")}>
-                        iQube
-                        <span className="absolute text-center text-white -top-2 beta-badge">
-                            beta
-                        </span>
-                    </p>
+                <div className="col-start-1 col-span-2">
+                    <AppBanner />
                 </div>
+
                 {
                     MenuItems.map((item, index) => {
                         return (
-                            <a className={cx(
-                                "col-span-1 text-center self-center justify-self-center",
-                                `col-start-` + (5 + index),
-                                styles.navListItem)}>
+                            <a
+                                key={"menu-item-" + index}
+                                className={cx(
+                                    `col-span-1 text-center self-center justify-self-center col-start-${5 + index}`,
+                                    styles.navListItem)}>
                                 {item}
                             </a>
                         )
@@ -96,8 +91,8 @@ export default function Navbar() {
                     {
                         MenuItems.map((item, index) => {
                             return (
-                                <a className={cx(
-                                    "col-span-1 text-center self-center justify-self-center",
+                                <a key={"nav-a-" + index} className={cx(
+                                    "text-center self-center justify-self-center",
                                     styles.navListItem)}>
                                     {item}
                                 </a>
@@ -153,7 +148,7 @@ export default function Navbar() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right md:hidden">
+                    <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                 <a href="/features" className="secondary-menu cursor-pointer no-underline hover:underline">{'Features'}</a>
@@ -174,23 +169,6 @@ export default function Navbar() {
                     </Popover.Panel>
                 </Transition>
             </Popover >
-
-            {/* <Grid additionalStyles="lg:hidden">
-                <div className="col-start-1 col-span-2 flex items-center">
-                    <picture>
-                        <img className="inline" height="32" width="32" src="./assets/logo_cube.png" />
-                    </picture>
-                    <p className="ml-4 inline app-banner relative">
-                        iQube
-                        <span className="absolute text-center text-white -top-2 beta-badge">
-                            beta
-                        </span>
-                    </p>
-                </div>
-                <button className="col-start-4 col-span-1 flex justify-end content-center items-center h-full">
-                    <img src="/assets/icons/menu.svg" />
-                </button>
-            </Grid> */}
         </nav>
     )
 }

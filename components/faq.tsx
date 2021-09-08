@@ -13,11 +13,11 @@ export default function Faq() {
 
                 <Grid additionalStyles="h-full absolute z-0 hidden lg:grid">
                     <div className="relative col-span-1 col-start-1 z-0">
-                        <figure className="small-cube absolute" style={{ bottom: "120px", height: "75px", width: "75px" }}>
+                        <figure className="small-cube absolute" style={{ top: "499px", height: "75px", width: "75px" }}>
                         </figure>
                     </div>
                     <div className="relative col-span-1 col-start-2 z-0">
-                        <figure className="small-cube absolute -left-4" style={{ bottom: "200px", height: "75px", width: "75px" }}>
+                        <figure className="small-cube absolute -left-4" style={{ top: "419px", height: "75px", width: "75px" }}>
                         </figure>
                     </div>
 

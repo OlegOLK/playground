@@ -51,28 +51,30 @@ function FlexSection({ header, cube, imgAlt, imgSrc, subHeader, ltr, index }: Pr
     return (
         <>
             <div className="w-full bg-gray-100 flex justify-center items-center" style={{ height: "375px" }}>
-                <div className="grid grid-w-full grid-cols-4">
+                <Grid>
                     <picture className="col-start-1 col-span-4 justify-self-center">
                         <img height="300" width="300" alt={imgAlt} src={imgSrc} />
                     </picture>
-                </div>
+                </Grid>
             </div>
 
-            <Grid additionalStyles="mt-11 mb-20">
-                <div className="col-start-1 col-span-4 mx-5">
-                    <picture>
-                        {cube}
-                    </picture>
-                    <p className={cx("text-h2 text-left", styles.header)}>{header}</p>
+            <div className="w-full">
+                <Grid additionalStyles="mt-11 mb-20">
+                    <div className="col-start-1 col-span-4">
+                        <picture>
+                            {cube}
+                        </picture>
+                        <p className={cx("text-h2 text-left", styles.header)}>{header}</p>
 
-                    <p className="text-default text-left mt-8">
-                        {subHeader}
-                    </p>
+                        <p className="text-default text-left mt-8">
+                            {subHeader}
+                        </p>
 
-                    <figure className="mt-6 bg-color-main h-1 w-22 rounded-sm">
-                    </figure>
-                </div>
-            </Grid>
+                        <figure className="mt-6 bg-color-main h-1 w-22 rounded-sm">
+                        </figure>
+                    </div>
+                </Grid>
+            </div>
         </>
     )
 }
@@ -97,7 +99,7 @@ export default function Section({ header, cube, imgAlt, imgSrc, subHeader, ltr, 
                 />
             </section>
 
-            <section className="flex lg:hidden w-full flex-col justify-center items-center relative">
+            <section className="flex lg:hidden w-screen flex-col justify-center items-center relative">
                 <FlexSection
                     cube={cube}
                     header={header}

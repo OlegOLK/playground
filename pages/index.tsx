@@ -29,7 +29,9 @@ export default function Home() {
         imgSrc="./assets/features/security_first_approach.png"
         imgAlt="Security-First Approach image"
         cube={
+          <div className="relative">
           <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
+          </div>
         }
         verticalCubes={
           <div className="absolute hidden lg:block w-full h-full">
@@ -69,7 +71,9 @@ export default function Home() {
         imgSrc="./assets/features/every_statoshi_counts.png"
         imgAlt="Every Satoshi Counts image"
         cube={
-          <img height="42" width="32" src="./assets/features/every_statoshi_counts_cube.png" />
+          <div className="relative">
+            <img height="42" width="32" src="./assets/features/every_statoshi_counts_cube.png" />
+          </div>
         }
         verticalCubes={
           <div className="w-full h-full absolute hidden lg:block">

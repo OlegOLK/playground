@@ -3,6 +3,11 @@
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navListItem:hover {
+    text-decoration: underline;
 }
 
 .shadowButton {
