@@ -4,8 +4,8 @@ import cx from 'classnames';
 import React, { useEffect, useState } from "react";
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import { MenuIcon } from "@heroicons/react/solid";
 import AppBanner from "./lib/app.banner";
+import LanguageSwitcher from "./lib/language.switcher";
 
 const MenuItems: string[] = [
     "Features",
@@ -50,12 +50,13 @@ export default function Navbar() {
                         )
                     })
                 }
-                <button className={cx("col-start-8 col-span-1", styles.navListItem)}>
+                <LanguageSwitcher />
+                {/* <button className={cx("col-start-8 col-span-1", styles.navListItem)}>
                     <p className="flex items-center color-main justify-end">
                         <img src="./assets/globe.png" height="17" width="16" className="inline mr-2"></img>
                         EN
                     </p>
-                </button>
+                </button> */}
 
                 <button className="col-start-10 col-span-1 nav-list-item">
                     <p className="flex items-center color-main" style={{ textTransform: "none" }}>

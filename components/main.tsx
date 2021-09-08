@@ -7,26 +7,26 @@ export default function Main() {
         <main className={cx("w-full flex justify-center items-center relative", styles.main)}>
 
             {/* SMALL PATTERNS */}
-            <Grid additionalStyles="h-full absolute z-0">
+            <Grid additionalStyles="h-full absolute z-0 w-full">
                 <div className="col-start-1 col-span-1 relative">
                     <img src="./assets/patterns/main/BTC.png" className="absolute left-0" height="43" width="58"
                         style={{ marginTop: "107px;" }} ></img>
                 </div>
 
-                <div className="col-start-3 col-span-1 relative">
-                    <figure className="small-cube -right-4 absolute" style={{ marginTop: "61px", height: "75px", width: "75px" }}>
+                <div className="col-start-1 lg:col-start-3 col-span-1 relative">
+                    <figure className="hidden lg:block small-cube -right-4 absolute" style={{ marginTop: "61px", height: "75px", width: "75px" }}>
                     </figure>
-                    <p className="dollar-symbol text-left" style={{ marginTop: "171px;" }}>$</p>
+                    <p className="hidden lg:block dollar-symbol text-left" style={{ marginTop: "171px;" }}>$</p>
                     <img src="./assets/patterns/main/chart.png" width="60" height="68" className="absolute -right-4"
                         style={{ marginTop: "285px" }} />
                 </div>
 
-                <div className="col-start-6 col-span-1 relative">
+                <div className="col-start-1 lg:col-start-6 col-span-1 relative">
                     <img src="./assets/patterns/main/plus.png" className="absolute -left-6" height="48" width="48"
                         style={{ marginTop: "22px" }} />
                 </div>
 
-                <div className="col-start-8 col-span-1 relative">
+                <div className="hidden lg:block col-start-8 col-span-1 relative">
                     <img src="./assets/patterns/main/BTC.png" className="absolute right-0" height="43" width="58"
                         style={{ marginTop: "581px" }} />
                 </div>
